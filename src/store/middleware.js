@@ -21,8 +21,14 @@ export const fetchCityAndStateMiddleware = ({getState, dispatch}) => next => act
     .then(postCodeObj => {
       console.log(postCodeObj);
 
-      dispatch(actions.setState(postCodeObj.places[0].state));
-      dispatch(actions.setCity(postCodeObj.places[0]['place name']));
+      if(JSON.stringify(postCodeObj) != '{}'){
+        dispatch(actions.setState(postCodeObj.places[0].state));
+        dispatch(actions.setCity(postCodeObj.places[0]['place name']));
+      }
+      else{
+        console.log("No zip code found");
+      }
+      
     })
 
   }
