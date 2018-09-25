@@ -15,18 +15,6 @@ const reducer = (state, action) => {
             return state;
     }
 
-    // if( action.type === "SET_EMAIL") {
-    //     const newState = {...state};
-    //     newState.person.email = action.email;
-    //     return newState;    
-    // }
-    // if( action.type === "SET_CELL") {
-    //     const newState = {...state};
-    //     newState.person.cell = action.cell;
-    //     return newState;    
-    // }
-
-    // return state;
 };
 const initialState = {person: user};
 
