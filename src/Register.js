@@ -117,6 +117,7 @@ export class Register extends Component {
     }
   }
 
-  fetchCityAndState(e) {
+  fetchCityAndState = (e) => {
+    store.dispatch(actions.fetchCityAndState(e.target.value));
   }
 }

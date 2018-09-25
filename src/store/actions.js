@@ -14,7 +14,11 @@ export const actionTypes = {
   
   //Contact Information section
   SET_EMAIL: "SET_EMAIL",
-  SET_CELL: "SET_CELL"
+  SET_CELL: "SET_CELL",
+
+  //async
+  FETCH_CITY_AND_STATE: "FETCH_CITY_AND_STATE"
+
 };
 
 
@@ -30,6 +34,9 @@ const setPostCode = postCode => ({type:actionTypes.SET_POSTCODE, postCode});
 const setEmail = email => ({type:actionTypes.SET_EMAIL, email});
 const setCell = cell => ({type:actionTypes.SET_CELL, cell});
 
+
+const fetchCityAndState = postCode => ({type:actionTypes.FETCH_CITY_AND_STATE, postCode});
+
 export const actions = {
   setTitle,
   setFirstName,
@@ -39,5 +46,6 @@ export const actions = {
   setState,
   setPostCode,
   setEmail,
-  setCell
+  setCell,
+  fetchCityAndState
 }
