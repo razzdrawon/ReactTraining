@@ -15,11 +15,11 @@ const personReducer = (state, action) => {
 const nameReducer = (state, action) => {
   if (!action) return state;
   switch (action.type) {
-    case "SET_FIRST_NAME":
+    case actionTypes.SET_FIRST_NAME:
       return { ...state, first: action.firstname }
-    case "SET_LAST_NAME":
+    case actionTypes.SET_LAST_NAME:
       return { ...state, last: action.lastname }
-    case "SET_TITLE":
+    case actionTypes.SET_TITLE:
       return { ...state, title: action.title }
     default:
       return state;
@@ -28,13 +28,13 @@ const nameReducer = (state, action) => {
 const locationReducer = (state, action) => {
   if (!action) return state;
   switch (action.type) {
-    case "SET_STREET":
+    case actionTypes.SET_STREET:
       return { ...state, street: action.street }
-    case "SET_CITY":
+    case actionTypes.SET_CITY:
       return { ...state, city: action.city }
-    case "SET_STATE":
+    case actionTypes.SET_STATE:
       return { ...state, state: action.state }
-    case "SET_POSTCODE":
+    case actionTypes.SET_POSTCODE:
       return { ...state, postcode: action.postcode }
     default:
       return state;

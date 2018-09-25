@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { store } from './store/store';
-import { actions, actionTypes } from './store/actions';
+import { actions } from './store/actions';
 
 export class Register extends Component {
   render() {
@@ -88,25 +88,25 @@ export class Register extends Component {
   changePerson = (e) => {
     switch (e.target.id) {
       case "title":
-        store.dispatch({ type: "SET_TITLE", title: e.target.value });
+        store.dispatch(actions.setTitle(e.target.value));
         break;
       case "first_name":
-        store.dispatch({ type: "SET_FIRST_NAME", firstname: e.target.value });
+        store.dispatch(actions.setFirstName(e.target.value));
         break;
       case "last_name":
-        store.dispatch({ type: "SET_LAST_NAME", lastname: e.target.value });
+        store.dispatch(actions.setLastName(e.target.value));
         break;
       case "street":
-        store.dispatch({ type: "SET_STREET", street: e.target.value });
+        store.dispatch(actions.setStreet(e.target.value));
         break;
       case "city":
-        store.dispatch({ type: "SET_CITY", city: e.target.value });
+        store.dispatch(actions.setCity(e.target.value));
         break;
       case "state":
-        store.dispatch({ type: "SET_STATE", state: e.target.value });
+        store.dispatch(actions.setState(e.target.value));
         break;
       case "postcode":
-        store.dispatch({ type: "SET_POSTCODE", postcode: e.target.value });
+        store.dispatch(actions.setPostCode(e.target.value));
         break;
       case "email":
         store.dispatch(actions.setEmail(e.target.value));
